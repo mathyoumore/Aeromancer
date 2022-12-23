@@ -103,7 +103,7 @@ def generateCountyZip():
         lat = row['latitude']
         lon = row['longitude']
         pop = row['irs_estimated_population']
-        nws_id = row['nws_id']
+        nws_id = row['ugc']
         if nws_id not in county_zip.keys():
             county_zip[nws_id] = {
                 'state': state,
@@ -129,7 +129,7 @@ def mapZipsAndCounties():
         lat = row['latitude']
         lon = row['longitude']
         pop = row['irs_estimated_population']
-        nws_id = row['nws_id']
+        nws_id = row['ugc']
 
         if state not in zip_county_state.keys():
             zip_county_state[state] = {
@@ -330,7 +330,10 @@ while crawling:
                     #     ugs_zips = ugs['zip_codes']
                     #     ugs_county = ugs['county']
                     #     ugs_pop = ugs['pop']
-                    state = state_county['state']
+                    try:
+                        state = state_county['state']
+                    except:
+                        breakpoint()
                     simple_county = state_county['simple_county']
                     if simple_county in zip_county_state[state]['counties'].keys():
                         zips = zip_county_state[state]['counties'][simple_county]['zip_codes']

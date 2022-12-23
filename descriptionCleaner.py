@@ -4,8 +4,24 @@ import json
 from datetime import datetime
 
 sentence_tokenizer = r'(\s*[^.!?]*[.!?]{1,3})'
-event_tokenizer = r'(?P<precipitation>sleet|snow|ice)\saccumulations\sof\s(?P<accumulation_range_qualifier>up\sto\s)?(?P<accumulation_range_lower>[1234567890]{1,2}|one|two|three|four|five|six|seven|eight|nine)\s(?P<accumulation_denom_1>tenths?\s|quarters?\s)?(to\s)?(of\s)?(?P<accumulation_range_upper>[1234567890]{1,2}\s|one\s|two\s|three\s|four\s|five\s|six\s|seven\s|eight\s|nine\s)?(?P<accumulation_denom_2>tenths?\s|quarters?\s)?(of\s)?(?P<accumulation_unit>inch|inches|an inch|a foot)'
+event_tokenizer = (
+    r"(?P<precipitation>sleet|snow|ice)\saccumulations(\sof\s)?"
+    r"(?P<accumulation_range_qualifier>up\sto\s)?(\sup\s)?"
+    r"(?P<accumulation_range_lower>[1234567890]{1,2}|one|two|three|four|five|six|seven|eight|nine)\s"
+    r"(?P<accumulation_denom_1>tenths?\s|quarters?\s)?(to|of|or\s)?"
+    r"(?P<accumulation_range_upper>[1234567890]{1,2}\s|one\s|two\s|three\s|four\s|five\s|six\s|seven\s|eight\s|nine\s)?"
+    r"(?P<accumulation_denom_2>tenths?\s|quarters?\s)?(of\s)?"
+    r"(?P<accumulation_unit>inch|inches|an inch|a foot)"
+)
 
+
+event_tokenizer = ("(?P<precipitation>sleet|snow|ice)\saccumulations(\sof\s)?"
+r"(?P<accumulation_range_qualifier>up\sto\s)?(\sup\s)?"
+r"(?P<accumulation_range_lower>[1234567890]{1,2}|one|two|three|four|five|six|seven|eight|nine)\s?"
+r"(?P<accumulation_denom_1>half|halves|tenths?|quarters?)?\s?(to|of|or)?\s?"
+r"(?P<accumulation_range_upper>[1234567890]{1,2}|one|two|three|four|five|six|seven|eight|nine)?\s?(to)?"
+r"(?P<accumulation_denom_2>half|halves|tenths?\s|quarters?\s)?(of\s)?"
+r"(?P<accumulation_unit>inch|an inch|a foot)")
 #raise("Use this to deconstruct existing CSV logs")
 
 now = datetime.now()  # current date and time
