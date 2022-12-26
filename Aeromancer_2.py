@@ -3,15 +3,14 @@ import json
 import re
 import time
 import csv
-import markdowntable
 import pandas as pd
 from datetime import datetime
 from typing import List, Set, Dict, Tuple, Optional
+from PrecipitationParser import PrecipitationParser
 
 pd.options.display.width = 0
 
 """
-
 TO DO LIST, FEATURE EDITION
 Consolidate files
 Log that actually works
@@ -30,27 +29,7 @@ TO DO, RESEARCH
 TO DO LIST
 Cron job to run this every day, appending data
 Visualization of data model
-
 """
-
-sentence_tokenizer = r'(\s*[^.!?]*[.!?]{1,3})'
-event_tokenizer = (
-    r"(?P<precipitation>sleet|snow|ice)(fall)?\saccumulations\s?((of|between)\s)?"
-    r"(?P<accumulation_range_qualifier>(up to|a coating)\s)?(\sup\s)?"
-    r"(?P<accumulation_range_lower>[1234567890]{1,3}|one|two|three|four|five|six|seven|eight|nine)?\s?"
-    r"(?P<accumulation_denom_1>tenths?\s|quarters?\s)?(to|of|or|and)?\s?"
-    r"(?P<accumulation_range_upper>[1234567890]{1,3}\s|one\s|two\s|three\s|four\s|five\s|six\s|seven\s|eight\s|nine\s)?"
-    r"(?P<accumulation_denom_2>tenths?\s|quarters?\s)?(of\s)?"
-    r"(?P<accumulation_unit>inch|inches|an inch|a foot)?"
-)
-
-badwords = (
-            r"(Mountain(s)?|Foothills|Island|Ft|"
-            r"Highway|Canal|Cape|Lakeshore|Highlands|0 Feet|"
-            r"Virginia Blue Ridge|Alaska Range|[Yy]ampa [Rr]iver|"
-            r"lake region|range|Slopes|Zion national park|denali|"
-            r"Deltana and tanana|valley|basin)"
-            )
 
 def retry_get(url, url_params = {}, max_retries = 10, pass_errors = False):
     response = requests.get(url, params = url_params, verify=should_verify)
@@ -128,25 +107,8 @@ class UGCFetcher():
     def update_zones(self):
         #with open('data/raw/zones_to_check.txt', 'w', encoding='utf-8') as f:
         #   f.write(str(self.zones_to_check))
-        breakpoint()
         new_ugc_df = pd.DataFrame()
         county_zones = []
-        """
-        with open('data/raw/zones_to_check.txt') as f:
-            print('If you are not testing, you should not be reading this.')
-            raw_zones = f.read().split(',')
-            self.zones_to_check = []
-            for z in raw_zones:
-                try:
-                    ugc_match = re.search(r"(?P<ugc>[A-Z]{3}\d{2,3})",z).groups()
-                    self.zones_to_check.append(ugc_match[0])
-                except:
-                    print("I don't know what to do with this:",z)
-            new_ugc_df = pd.read_csv('pre_master_ugc.csv')
-            print("Old length:",len(self.zones_to_check))
-            self.zones_to_check = set(self.zones_to_check) - set(new_ugc_df['ugc'])
-            print("New length:",len(self.zones_to_check))
-        """
         fails = []
         self.zones_to_check = set(self.zones_to_check) - set(self.ugc_df['ugc'])
         print("Checking", len(self.zones_to_check),"zones")
@@ -178,67 +140,9 @@ class UGCFetcher():
                 'id': type_id
                 })
                 print("Failed to add",ugc)
-        print(f"Added zone {i} of {len(self.zones_to_check)} ({ugc})")
+            print(f"Added zone {i} of {len(self.zones_to_check)} ({ugc})")
         pd.DataFrame(fails).to_csv('zones_to_check_again.csv')
         new_ugc_df.to_csv('ugc_master.csv')
-
-    """
-    Iterate through each region zone
-    If it exists in the known database, skip it
-    If it isn't a good code, skip it
-    Otherwise store it
-    """
-
-"""
-UGC identifier for a NWS forecast zone or county.
-The first two letters will correspond to either a state code or marine area code
-(see #/components/schemas/StateTerritoryCode and #/components/schemas/MarineAreaCode for lists of valid letter combinations).
-The third letter will be Z for public/fire zone or C for county.
-"""
-
-def processPrecipitation(raw):
-    matches = []
-    simple_desc = re.sub("\n", ' ', str(raw))
-    sentences = re.split(sentence_tokenizer, simple_desc)
-    for s in sentences:
-        match = re.search(event_tokenizer, s, flags=re.IGNORECASE)
-        if match is not None:
-            matches.append(match)
-    return matches
-
-def accumulation_to_num(raw_):
-    result = -1
-    raw = raw_.strip()
-    if re.search('\d',raw) is not None:
-        result = raw
-    else:
-        match raw:
-            case 'one':
-                result = 1.0
-            case 'two':
-                result = 2.0
-            case 'three':
-                result = 3.0
-            case 'four':
-                result = 4.0
-            case 'five':
-                result = 5.0
-            case 'six':
-                result = 6.0
-            case 'seven':
-                result = 7.0
-            case 'eight':
-                result = 8.0
-            case 'nine':
-                result = 9.0
-    return result
-
-def accumluation_denominator(raw):
-    if raw is None:
-        return 1
-    return {'tenth': 0.1, 'tenths': 0.1,
-     'quarter': 0.25, 'quarters': 0.25,
-     'fifth': 0.2, 'fifths': 0.2}[raw.strip()]
 
 should_verify = True
 # If behind the company VPN, you'll need to be bad and add verify=False here
@@ -255,17 +159,6 @@ start_time = datetime.strptime(
 end_time = datetime.strptime(
     str(int(year) + 1) + month + "01T00:00-05:00", '%Y%m%dT%H:%M%z')
 
-county_cleaner = (r"(North[ews]?\w*\s|South[ews]?\w*\s|East(ern)?\s|"
-                  r"West(ern)?\s|Central\s|Interior\s|Coastal\s|\s?Inland\s|"
-                  r"\s?County\s?|Upper\s|Lower\s)")
-county_badwords = (r"(Mountain(s)?|Foothills|Island|Ft|"
-                   r"Highway|Canal|Cape|Lakeshore|Highlands|0 Feet|"
-                   r"Virginia Blue Ridge|Alaska Range|[Yy]ampa [Rr]iver|"
-                   r"lake region|range|Slopes|Zion national park|denali|"
-                   "Deltana and tanana|valley|basin)")
-
-#zips_df = pd.read_csv('data/zip_code_database.csv')
-
 event_params = [
                    {
                        'event': 'Winter Storm Warning',
@@ -281,12 +174,14 @@ event_params = [
 fetcher = NWSFetcher(event_params)
 ugc_check = UGCFetcher()
 
+precip_parser = PrecipitationParser()
+
 def fetch_new_events():
     new_events = pd.DataFrame()
     new_event_locations = pd.DataFrame()
     #event = features[0]['properties']
     crawling = True
-
+    events_processed = 0
     while crawling:
         data_raw = fetcher.fetchWeatherData()
         time.sleep(1)
@@ -296,8 +191,8 @@ def fetch_new_events():
         else:
             features = data_raw['features']
             for i, e_ in enumerate(features):
-                if i % 100 == 0:
-                    print("Working on event number",i)
+                if (events_processed+i) % 100 == 0:
+                    print("Working on event",events_processed+i)
                 event = e_['properties']
                 event_data = {
                 'nws_id': event['id'],
@@ -306,37 +201,19 @@ def fetch_new_events():
                 'severity':event['severity'],
                 'type':event['event']}
 
-                precipitation = processPrecipitation(event['description'])
-                if precipitation == []  :
-                    event_data['precipitation_error'] = 'No Precipitation'
-                for detail in precipitation:
-                    max_precip, min_precip = None, None
-                    d = detail.groupdict()
-                    type_precip = d['precipitation'].lower()
-                    if d['accumulation_range_lower'] is not None:
-                        if d['accumulation_range_qualifier'] is not None:
-                            if d['accumulation_range_lower'] == 'one':
-                                max_precip = 1 * accumluation_denominator(d['accumulation_denom_1'])
-                            else:
-                                try:
-                                    max_precip = accumulation_to_num(d['accumulation_range_lower']) * accumluation_denominator(d['accumulation_denom_1'])
-                                except:
-                                    breakpoint()
-                            min_precip = None
-                        else:
-                            try:
-                                min_precip = accumulation_to_num(d['accumulation_range_lower']) * accumluation_denominator(d['accumulation_denom_1'])
-                                max_precip = accumulation_to_num(d['accumulation_range_upper']) * accumluation_denominator(d['accumulation_denom_2'])
-                                event_data[type_precip + '_min'] = min_precip
-                                event_data[type_precip + '_max'] = max_precip
-                            except:
-                                event_data['precipitation_error'] = 'Invalid Range'
+                precip_parser.dump()
+                precip_parser.load_description(event['description'])
+                try:
+                    precip_data = precip_parser.process()
+                    event_data = event_data | precip_data
+                except e_:
+                    print("Precipitation Parsing Error", e)
+                    event_data = event_data | {'precipitation_error': 1}
 
                 new_event_row = pd.DataFrame([event_data])
                 new_events = pd.concat([new_events,new_event_row])
                 new_events = new_events.reset_index(drop = True)
 
-                salt = str(datetime.now().strftime('%Y%m%d_%H'))
                 for ugc in event['geocode']['UGC']:
                     ugc_check.load_unknowns(ugc)
                     new_loc = pd.DataFrame([{
@@ -344,16 +221,15 @@ def fetch_new_events():
                             'ugc': ugc
                         }])
                     new_event_locations = pd.concat([new_event_locations, new_loc])
-                    new_event_locations.to_csv('data/v2_' + salt + '_event_locations.csv')
-                new_events.to_csv('data/v2_' + salt + '_events.csv')
-
-
-    print("\n\n\n\n")
+            events_processed += 1
+    salt = str(datetime.now().strftime('%Y%m%d_%H'))
+    new_event_locations.reset_index(drop=True).to_csv('data/v2_' + salt + '_event_locations.csv')
+    new_events.reset_index(drop=True).to_csv('data/v2_' + salt + '_events.csv')
 
 fetch_new_events()
+print(f"*******\n\nFinished getting events!\nAnd it only took me {round(time.time() - process_start,2)} seconds.\nUpdating UGC now!\n\n*******")
 ugc_check.update_zones()
-
-breakpoint()
+print(f"All done! Total time elapsed: {round(time.time() - process_start,2)} seconds")
 
 """
 MOZ034
