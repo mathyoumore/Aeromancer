@@ -7,6 +7,8 @@ import pandas as pd
 from datetime import datetime
 from typing import List, Set, Dict, Tuple, Optional
 from PrecipitationParser import PrecipitationParser
+import os
+
 
 pd.options.display.width = 0
 
@@ -166,10 +168,7 @@ event_params = [
                    },
                    {
                         'event': 'Tornado Warning'
-                    },
-                   {
-                        'event': 'Winter Weather Advisory'
-                    },
+                    }
     ]
 fetcher = NWSFetcher(event_params)
 ugc_check = UGCFetcher()
@@ -221,14 +220,69 @@ def fetch_new_events():
                             'ugc': ugc
                         }])
                     new_event_locations = pd.concat([new_event_locations, new_loc])
-            events_processed += 1
+                events_processed += 1
     salt = str(datetime.now().strftime('%Y%m%d_%H'))
     new_event_locations.reset_index(drop=True).to_csv('data/v2_' + salt + '_event_locations.csv')
     new_events.reset_index(drop=True).to_csv('data/v2_' + salt + '_events.csv')
 
-fetch_new_events()
+def retro_process():
+    new_events = pd.DataFrame()
+    new_event_locations = pd.DataFrame()
+    #event = features[0]['properties']
+    events_processed = 0
+    directory = 'data/raw/'
+    salt = None
+    for file in os.listdir(directory):
+         filename = os.fsdecode(file)
+         file_path = directory+filename
+         if filename.endswith(".json"):
+            if salt is None:
+                salt = file_path[19:30]
+            if salt != file_path[19:30]:
+                print(salt)
+                # new day data
+                new_event_locations.reset_index(drop=True).to_csv('data/v2_' + salt + '_event_locations.csv')
+                new_events.reset_index(drop=True).to_csv('data/v2_' + salt + '_events.csv')
+                salt = file_path[19:30]
+            data_raw = json.loads(open(file_path).read())
+            features = data_raw['features']
+            for i, e_ in enumerate(features):
+                if (events_processed+i) % 100 == 0:
+                    print("Working on event",events_processed+i)
+                event = e_['properties']
+                event_data = {
+                'nws_id': event['id'],
+                'start':event['effective'],
+                'end':event['ends'],
+                'severity':event['severity'],
+                'type':event['event']}
+
+                precip_parser.dump()
+                precip_parser.load_description(event['description'])
+                try:
+                    precip_data = precip_parser.process()
+                    event_data = event_data | precip_data
+                except e_:
+                    print("Precipitation Parsing Error", e)
+                    event_data = event_data | {'precipitation_error': 1}
+
+                new_event_row = pd.DataFrame([event_data])
+                new_events = pd.concat([new_events,new_event_row])
+                new_events = new_events.reset_index(drop = True)
+
+                for ugc in event['geocode']['UGC']:
+                    ugc_check.load_unknowns(ugc)
+                    new_loc = pd.DataFrame([{
+                            'nws_id': event['id'],
+                            'ugc': ugc
+                        }])
+                    new_event_locations = pd.concat([new_event_locations, new_loc])
+                events_processed += 1
+
+#fetch_new_events()
+retro_process()
 print(f"*******\n\nFinished getting events!\nAnd it only took me {round(time.time() - process_start,2)} seconds.\nUpdating UGC now!\n\n*******")
-ugc_check.update_zones()
+#ugc_check.update_zones()
 print(f"All done! Total time elapsed: {round(time.time() - process_start,2)} seconds")
 
 """
