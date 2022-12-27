@@ -1,107 +1,1007 @@
 ,land,ugc,type,name,state
-0,1,PAZ073,public,Westmoreland,PA
-0,1,NJZ015,public,Mercer,NJ
-0,1,NJZ027,public,Southeastern Burlington,NJ
-0,1,ARZ060,public,Hempstead,AR
-0,1,ORZ050,public,Wallowa County,OR
-0,1,KSZ023,public,Pottawatomie,KS
-0,1,OHZ058,public,Guernsey,OH
-0,1,WVZ002,public,Brooke,WV
-0,1,ARZ062,public,Dallas,AR
-0,1,ORZ049,public,Grande Ronde Valley,OR
-0,1,PAZ102,public,Eastern Chester,PA
-0,1,WVZ004,public,Marshall,WV
-0,1,AKZ220,public,Yukon Flats and Surrounding Uplands,AK
-0,1,NJZ010,public,Somerset,NJ
-0,1,PAZ070,public,Delaware,PA
-0,1,ARZ065,public,Desha,AR
-0,1,PAZ021,public,Allegheny,PA
-0,1,ARZ063,public,Cleveland,AR
-0,1,ARZ069,public,Drew,AR
-0,1,TXZ109,public,Titus,TX
-0,1,NJZ024,public,Atlantic Coastal Cape May,NJ
-0,1,PAZ029,public,Washington,PA
-0,1,NJZ025,public,Coastal Atlantic,NJ
-0,1,DEZ001,public,New Castle,DE
-0,1,ARZ072,public,Columbia,AR
-0,1,ORZ002,public,Central Oregon Coast,OR
-0,1,WAZ034,public,Moses Lake Area,WA
-0,1,WAZ517,public,Central Coast,WA
-0,1,OHZ041,public,Columbiana,OH
-0,1,NJZ020,public,Ocean,NJ
-0,1,TXZ111,public,Morris,TX
-0,1,WVZ510,public,Ridges of Eastern Monongalia and Northwestern Preston,WV
-0,1,ARZ059,public,Little River,AR
-0,1,VAZ055,public,Stafford,VA
-0,1,ARZ064,public,Lincoln,AR
-0,1,PAZ031,public,Greene,PA
-0,1,ARZ068,public,Bradley,AR
-0,1,NJZ022,public,Atlantic,NJ
-0,1,WVZ511,public,Preston,WV
-0,1,ORZ012,public,Cascade Foothills in Lane County,OR
-0,1,WVZ513,public,Western Tucker,WV
-0,1,NCZ051,public,Swain,NC
-0,1,WVZ012,public,Wetzel,WV
-0,1,AKZ221,public,Central Interior,AK
-0,1,ARZ061,public,Nevada,AR
-0,1,NEZ081,public,Red Willow,NE
-0,1,OHZ039,public,Tuscarawas,OH
-0,1,OHZ050,public,Jefferson,OH
-0,1,NJZ018,public,Camden,NJ
-0,1,ARZ071,public,Lafayette,AR
-0,1,NCZ059,public,Northern Jackson,NC
-0,1,MDZ020,public,Caroline,MD
-0,1,NJZ009,public,Hunterdon,NJ
-0,1,DEZ004,public,Delaware Beaches,DE
-0,1,NJZ026,public,Coastal Ocean,NJ
-0,1,NCZ062,public,Macon,NC
-0,1,AKZ227,public,Upper Kuskokwim Valley,AK
-0,1,MDZ019,public,Talbot,MD
-0,1,MDZ012,public,Kent,MD
-0,1,NCZ058,public,Graham,NC
-0,1,PAZ071,public,Philadelphia,PA
-0,1,OHZ040,public,Carroll,OH
-0,1,ARZ070,public,Miller,AR
-0,1,WVZ003,public,Ohio,WV
-0,1,NJZ021,public,Cumberland,NJ
-0,1,NJZ013,public,Western Monmouth,NJ
-0,1,OHZ068,public,Noble,OH
-0,1,NJZ016,public,Salem,NJ
-0,1,NJZ008,public,Morris,NJ
-0,1,TXZ097,public,Bowie,TX
-0,1,TXZ096,public,Red River,TX
-0,1,NDZ025,public,Foster,ND
-0,1,OHZ048,public,Coshocton,OH
-0,1,WVZ509,public,Monongalia,WV
-0,1,OHZ069,public,Monroe,OH
-0,1,WVZ001,public,Hancock,WV
-0,1,NCZ048,public,Madison,NC
-0,1,OHZ049,public,Harrison,OH
-0,1,NCZ063,public,Southern Jackson,NC
-0,1,TXZ112,public,Cass,TX
-0,1,WAZ035,public,Upper Columbia Basin,WA
-0,1,PAZ013,public,Lawrence,PA
-0,1,ARZ067,public,Calhoun,AR
-0,1,MIZ014,public,Southern Schoolcraft,MI
-0,1,IDZ008,public,Lower Hells Canyon/Salmon River Region,ID
-0,1,NJZ012,public,Middlesex,NJ
-0,1,OHZ057,public,Muskingum,OH
-0,1,DEZ003,public,Inland Sussex,DE
-0,1,NJZ023,public,Cape May,NJ
-0,1,NJZ017,public,Gloucester,NJ
-0,1,PAZ020,public,Beaver,PA
-0,1,WAZ038,public,Okanogan Highlands,WA
-0,1,NJZ014,public,Eastern Monmouth,NJ
-0,1,DEZ002,public,Kent,DE
-0,1,WVZ021,public,Marion,WV
-0,1,PAZ016,public,Jefferson,PA
-0,1,OHZ059,public,Belmont,OH
-0,1,ARZ066,public,Ouachita,AR
-0,1,PAZ075,public,Fayette,PA
-0,1,ARZ073,public,Union,AR
-0,1,MDZ015,public,Queen Anne's,MD
-0,1,KYZ052,public,Rowan,KY
-0,1,NJZ019,public,Northwestern Burlington,NJ
-0,1,AKZ218,public,Southeastern Brooks Range,AK
-0,1,WAZ044,public,Waterville Plateau,WA
-0,1,TXZ108,public,Franklin,TX
+0,1,MOZ067,public,St. Clair,MO
+0,1,INZ204,public,Western St. Joseph,IN
+0,1,AKZ330,public,Ketchikan Gateway Borough,AK
+0,1,INZ084,public,Crawford,IN
+0,1,MOZ064,public,St. Louis City,MO
+0,1,MNZ096,public,Houston,MN
+0,1,MIZ053,public,Saginaw,MI
+0,1,NYZ003,public,Monroe,NY
+0,1,ILZ002,public,Stephenson,IL
+0,1,MTZ327,public,Northwest Beaverhead County,MT
+0,1,INZ068,public,Daviess,IN
+0,1,MOZ009,public,Scotland,MO
+0,1,ILZ071,public,Clay,IL
+0,1,IAZ035,public,Webster,IA
+0,1,ILZ080,public,Perry,IL
+0,1,PAZ002,public,Southern Erie,PA
+0,1,MIZ076,public,Wayne,MI
+0,1,MOZ082,public,Texas,MO
+0,1,MTZ330,public,Gallatin and Madison County Mountains and Centennial Mountains,MT
+0,1,WAZ509,public,Tacoma Area,WA
+0,1,ILZ020,public,Kendall,IL
+0,1,ORZ007,public,Central Willamette Valley,OR
+0,1,MOZ037,public,Jackson,MO
+0,1,MNZ041,public,Douglas,MN
+0,1,ILZ051,public,Sangamon,IL
+0,1,MNZ052,public,Isanti,MN
+0,1,INZ061,public,Greene,IN
+0,1,IAZ008,public,Mitchell,IA
+0,1,KYZ022,public,Todd,KY
+0,1,IAZ051,public,Benton,IA
+0,1,NYZ020,public,Cattaraugus,NY
+0,1,WAZ510,public,Admiralty Inlet Area,WA
+0,1,ORZ003,public,Coast Range of Northwest Oregon,OR
+0,1,MNZ063,public,Washington,MN
+0,1,MOZ079,public,Polk,MO
+0,1,NYZ019,public,Chautauqua,NY
+0,1,KYZ042,public,Bourbon,KY
+0,1,TNZ024,public,Humphreys,TN
+0,1,WIZ043,public,Juneau,WI
+0,1,INZ090,public,Harrison,IN
+0,1,AZZ004,public,Kaibab Plateau,AZ
+0,1,NMZ214,public,Southern Sangre de Cristo Mountains,NM
+0,1,TNZ028,public,Wilson,TN
+0,1,IAZ094,public,Decatur,IA
+0,1,MIZ068,public,Livingston,MI
+0,1,MIZ075,public,Washtenaw,MI
+0,1,OHZ007,public,Ottawa,OH
+0,1,WAZ511,public,Hood Canal Area,WA
+0,1,ILZ088,public,Union,IL
+0,1,MOZ043,public,Cass,MO
+0,1,IAZ064,public,Johnson,IA
+0,1,ORZ510,public,North Central Oregon,OR
+0,1,OHZ010,public,Lorain,OH
+0,1,ILZ063,public,Clark,IL
+0,1,IAZ044,public,Crawford,IA
+0,1,MOZ060,public,Warren,MO
+0,1,MNZ087,public,Olmsted,MN
+0,1,IAZ009,public,Howard,IA
+0,1,WAZ020,public,Willapa Hills,WA
+0,1,ILZ097,public,Pike,IL
+0,1,WIZ066,public,Milwaukee,WI
+0,1,MIZ030,public,Alcona,MI
+0,1,IAZ090,public,Fremont,IA
+0,1,ILZ066,public,Effingham,IL
+0,1,ILZ027,public,Knox,IL
+0,1,ORZ041,public,Eastern Columbia River Gorge of Oregon,OR
+0,1,MNZ035,public,Northern Aitkin,MN
+0,1,WAZ556,public,Bellevue and Vicinity,WA
+0,1,IAZ045,public,Carroll,IA
+0,1,MOZ051,public,Montgomery,MO
+0,1,MTZ022,public,Garfield,MT
+0,1,IAZ092,public,Taylor,IA
+0,1,NMZ211,public,Jemez Mountains,NM
+0,1,MNZ062,public,Ramsey,MN
+0,1,KYZ056,public,Garrard,KY
+0,1,MOZ076,public,Perry,MO
+0,1,KSZ036,public,Geary,KS
+0,1,MOZ052,public,Lincoln,MO
+0,1,WIZ021,public,Northern Oconto County,WI
+0,1,INZ012,public,Starke,IN
+0,1,KYZ067,public,Lincoln,KY
+0,1,MIZ046,public,Isabella,MI
+0,1,ILZ101,public,St. Clair,IL
+0,1,MNZ048,public,Pope,MN
+0,1,WVZ055,public,Hardy,WV
+0,1,COZ019,public,Southwest San Juan Mountains,CO
+0,1,KSZ102,public,Doniphan,KS
+0,1,OHZ043,public,Shelby,OH
+0,1,NYZ008,public,Lewis,NY
+0,1,MOZ075,public,Ste. Genevieve,MO
+0,1,NEZ088,public,Jefferson,NE
+0,1,MOZ090,public,Greene,MO
+0,1,MTZ027,public,Wibaux,MT
+0,1,MOZ083,public,Dent,MO
+0,1,KYZ094,public,Owen,KY
+0,1,MTZ025,public,Dawson,MT
+0,1,INZ091,public,Floyd,IN
+0,1,MOZ114,public,New Madrid,MO
+0,1,WIZ003,public,Ashland,WI
+0,1,MNZ045,public,Kanabec,MN
+0,1,MTZ007,public,Butte/Blackfoot Region,MT
+0,1,MIZ074,public,Jackson,MI
+0,1,CAZ326,public,Upper San Joaquin River,CA
+0,1,WYZ027,public,South Lincoln County,WY
+0,1,IDZ056,public,Southern Hills/Albion Mountains,ID
+0,1,WAZ503,public,Western Whatcom County,WA
+0,1,COZ017,public,Uncompahgre Plateau/Dallas Divide,CO
+0,1,NEZ066,public,Lancaster,NE
+0,1,ILZ042,public,Logan,IL
+0,1,MOZ086,public,Bollinger,MO
+0,1,AKZ319,public,Haines Borough and Klukwan,AK
+0,1,IDZ069,public,Lost River Range,ID
+0,1,WAZ520,public,East Slopes of the Washington Cascades,WA
+0,1,ORZ006,public,Greater Portland Metro Area,OR
+0,1,WIZ029,public,Clark,WI
+0,1,MOZ096,public,Douglas,MO
+0,1,WIZ028,public,Eau Claire,WI
+0,1,IAZ086,public,Wapello,IA
+0,1,ILZ065,public,Fayette,IL
+0,1,IDZ054,public,Lower Snake River Plain,ID
+0,1,OHZ052,public,Champaign,OH
+0,1,OHZ021,public,Summit,OH
+0,1,KYZ046,public,Washington,KY
+0,1,ILZ050,public,Morgan,IL
+0,1,MOZ061,public,St. Charles,MO
+0,1,AKZ328,public,Prince of Wales Island,AK
+0,1,OHZ056,public,Licking,OH
+0,1,OHZ077,public,Hamilton,OH
+0,1,WIZ023,public,St. Croix,WI
+0,1,MTZ319,public,Helena Valley,MT
+0,1,AKZ320,public,Glacier Bay,AK
+0,1,ILZ096,public,Brown,IL
+0,1,MNZ092,public,Faribault,MN
+0,1,IAZ050,public,Tama,IA
+0,1,MOZ106,public,Oregon,MO
+0,1,KSZ010,public,Marshall,KS
+0,1,ILZ068,public,Crawford,IL
+0,1,ILZ041,public,Mason,IL
+0,1,KYZ015,public,Webster,KY
+0,1,INZ032,public,Grant,IN
+0,1,MOZ030,public,Ray,MO
+0,1,WIZ067,public,Lafayette,WI
+0,1,KYZ012,public,Trigg,KY
+0,1,MOZ025,public,Macon,MO
+0,1,WAZ001,public,San Juan County,WA
+0,1,INZ044,public,Parke,IN
+0,1,MOZ059,public,Gasconade,MO
+0,1,MOZ072,public,Crawford,MO
+0,1,KYZ078,public,Russell,KY
+0,1,INZ019,public,Benton,IN
+0,1,ORZ508,public,Foothills of the Southern Blue Mountains of Oregon,OR
+0,1,MNZ059,public,Wright,MN
+0,1,MDZ001,public,Garrett,MD
+0,1,MOZ080,public,Dallas,MO
+0,1,MNZ020,public,Southern Lake/North Shore,MN
+0,1,CAZ329,public,Grant Grove Area,CA
+0,1,WAZ555,public,East Puget Sound Lowlands,WA
+0,1,IAZ033,public,Sac,IA
+0,1,KYZ031,public,Oldham,KY
+0,1,KSZ009,public,Washington,KS
+0,1,KYZ062,public,Edmonson,KY
+0,1,INZ055,public,Johnson,IN
+0,1,ILZ102,public,Monroe,IL
+0,1,WIZ009,public,Price,WI
+0,1,OHZ001,public,Williams,OH
+0,1,OHZ027,public,Wyandot,OH
+0,1,KYZ089,public,Carroll,KY
+0,1,KSZ104,public,Wyandotte,KS
+0,1,MIZ081,public,Hillsdale,MI
+0,1,KYZ066,public,Casey,KY
+0,1,OHZ031,public,Wayne,OH
+0,1,KSZ021,public,Clay,KS
+0,1,AKZ321,public,Eastern Chichagof Island,AK
+0,1,KYZ095,public,Grant,KY
+0,1,IDZ065,public,Teton Valley,ID
+0,1,MTZ307,public,Southern Rocky Mountain Front,MT
+0,1,MIZ034,public,Roscommon,MI
+0,1,NEZ065,public,Seward,NE
+0,1,WIZ001,public,Douglas,WI
+0,1,WIZ045,public,Waushara,WI
+0,1,IAZ088,public,Henry,IA
+0,1,INZ034,public,Jay,IN
+0,1,TNZ026,public,Cheatham,TN
+0,1,COZ002,public,Central Yampa River Basin,CO
+0,1,IAZ023,public,Pocahontas,IA
+0,1,WYZ029,public,Flaming Gorge,WY
+0,1,WVZ514,public,Eastern Tucker,WV
+0,1,INZ030,public,Clinton,IN
+0,1,IAZ025,public,Wright,IA
+0,1,MNZ050,public,Benton,MN
+0,1,IAZ049,public,Marshall,IA
+0,1,MIZ070,public,Macomb,MI
+0,1,MNZ043,public,Morrison,MN
+0,1,KYZ033,public,Henry,KY
+0,1,KYZ014,public,Union,KY
+0,1,OHZ022,public,Portage,OH
+0,1,ORZ016,public,Central Columbia River Gorge,OR
+0,1,OHZ024,public,Van Wert,OH
+0,1,IAZ069,public,Pottawattamie,IA
+0,1,MNZ044,public,Mille Lacs,MN
+0,1,ILZ031,public,Woodford,IL
+0,1,INZ089,public,Perry,IN
+0,1,KYZ073,public,Allen,KY
+0,1,INZ001,public,Lake,IN
+0,1,IDZ052,public,Arco/Mud Lake Desert,ID
+0,1,KYZ024,public,Breckinridge,KY
+0,1,KYZ030,public,Jefferson,KY
+0,1,WYZ014,public,Wind River Mountains West,WY
+0,1,WAZ516,public,North Coast,WA
+0,1,INZ048,public,Hancock,IN
+0,1,ILZ012,public,Kane,IL
+0,1,WIZ005,public,Vilas,WI
+0,1,ORZ004,public,Central Coast Range of Western Oregon,OR
+0,1,IAZ036,public,Hamilton,IA
+0,1,IAZ047,public,Boone,IA
+0,1,KYZ097,public,Bracken,KY
+0,1,IAZ026,public,Franklin,IA
+0,1,ILZ015,public,Rock Island,IL
+0,1,INZ088,public,Spencer,IN
+0,1,INZ009,public,De Kalb,IN
+0,1,INZ080,public,Switzerland,IN
+0,1,ORZ005,public,Lower Columbia,OR
+0,1,ILZ073,public,Lawrence,IL
+0,1,MOZ036,public,Pike,MO
+0,1,UTZ023,public,Eastern Uinta Mountains,UT
+0,1,KYZ027,public,Grayson,KY
+0,1,OHZ005,public,Henry,OH
+0,1,MOZ063,public,St. Louis,MO
+0,1,OHZ003,public,Lucas,OH
+0,1,TNZ032,public,Putnam,TN
+0,1,MOZ042,public,Audrain,MO
+0,1,NEZ092,public,Pawnee,NE
+0,1,TNZ034,public,Fentress,TN
+0,1,IDZ066,public,Centennial Mountains/Island Park,ID
+0,1,KYZ061,public,Butler,KY
+0,1,IAZ016,public,Hancock,IA
+0,1,IAZ093,public,Ringgold,IA
+0,1,AKZ332,public,Annette Island,AK
+0,1,MOZ031,public,Carroll,MO
+0,1,MIZ080,public,Branch,MI
+0,1,INZ027,public,Adams,IN
+0,1,UTZ028,public,La Sal and Abajo Mountains,UT
+0,1,IAZ073,public,Warren,IA
+0,1,UTZ112,public,Western Uinta Mountains,UT
+0,1,KYZ040,public,Woodford,KY
+0,1,IAZ004,public,Emmet,IA
+0,1,ILZ019,public,La Salle,IL
+0,1,AKZ318,public,Municipality of Skagway,AK
+0,1,ILZ082,public,Hamilton,IL
+0,1,MOZ050,public,Callaway,MO
+0,1,WIZ002,public,Bayfield,WI
+0,1,IAZ079,public,Mills,IA
+0,1,ILZ016,public,Henry,IL
+0,1,INZ038,public,Tipton,IN
+0,1,WVZ501,public,Western Grant,WV
+0,1,MOZ023,public,Livingston,MO
+0,1,INZ026,public,Wells,IN
+0,1,KYZ047,public,Mercer,KY
+0,1,WIZ073,public,Southern Marinette County,WI
+0,1,INZ035,public,Fountain,IN
+0,1,WAZ568,public,West Slopes North Central Cascades and Passes,WA
+0,1,WIZ054,public,Crawford,WI
+0,1,KYZ082,public,Clinton,KY
+0,1,KYZ009,public,Calloway,KY
+0,1,MOZ012,public,Andrew,MO
+0,1,MOZ020,public,Buchanan,MO
+0,1,NEZ067,public,Cass,NE
+0,1,INZ060,public,Sullivan,IN
+0,1,PAZ003,public,Crawford,PA
+0,1,OHZ078,public,Clermont,OH
+0,1,KYZ043,public,Nicholas,KY
+0,1,WAZ559,public,Bremerton and Vicinity,WA
+0,1,MNZ051,public,Sherburne,MN
+0,1,WAZ033,public,Washington Palouse,WA
+0,1,KYZ090,public,Gallatin,KY
+0,1,IDZ058,public,Marsh and Arbon Highlands,ID
+0,1,INZ008,public,Noble,IN
+0,1,ILZ034,public,Hancock,IL
+0,1,ILZ086,public,Saline,IL
+0,1,IAZ054,public,Jackson,IA
+0,1,MOZ007,public,Putnam,MO
+0,1,IAZ019,public,Chickasaw,IA
+0,1,KYZ048,public,Jessamine,KY
+0,1,MNZ058,public,Meeker,MN
+0,1,TNZ008,public,Sumner,TN
+0,1,WIZ042,public,Monroe,WI
+0,1,MIZ083,public,Monroe,MI
+0,1,ILZ040,public,Schuyler,IL
+0,1,OHZ044,public,Logan,OH
+0,1,MTZ017,public,Central and Southern Valley,MT
+0,1,ILZ106,public,Northern Will,IL
+0,1,ILZ076,public,Wayne,IL
+0,1,INZ116,public,Northern Kosciusko,IN
+0,1,OHZ008,public,Sandusky,OH
+0,1,IAZ078,public,Louisa,IA
+0,1,WIZ030,public,Marathon,WI
+0,1,KYZ038,public,Spencer,KY
+0,1,MTZ062,public,Eastern Roosevelt,MT
+0,1,INZ054,public,Morgan,IN
+0,1,MNZ094,public,Mower,MN
+0,1,WIZ048,public,Winnebago,WI
+0,1,ILZ026,public,Warren,IL
+0,1,MOZ058,public,Maries,MO
+0,1,KSZ025,public,Atchison,KS
+0,1,MNZ036,public,South Aitkin,MN
+0,1,ILZ028,public,Stark,IL
+0,1,OHZ017,public,Hancock,OH
+0,1,ILZ084,public,Jackson,IL
+0,1,ILZ025,public,Henderson,IL
+0,1,MIZ051,public,Montcalm,MI
+0,1,KYZ057,public,Madison,KY
+0,1,MIZ061,public,Genesee,MI
+0,1,MOZ038,public,Lafayette,MO
+0,1,ILZ083,public,White,IL
+0,1,COZ021,public,Four Corners/Upper Dolores River,CO
+0,1,MIZ010,public,Iron,MI
+0,1,INZ022,public,Cass,IN
+0,1,MOZ029,public,Clay,MO
+0,1,OHZ079,public,Brown,OH
+0,1,WIZ050,public,Manitowoc,WI
+0,1,WIZ011,public,Forest,WI
+0,1,WIZ072,public,Kenosha,WI
+0,1,OHZ026,public,Hardin,OH
+0,1,COZ060,public,Eastern Sawatch Mountains above 11000 Ft,CO
+0,1,MOZ087,public,Cape Girardeau,MO
+0,1,ILZ105,public,Southern Cook,IL
+0,1,AKZ326,public,Petersburg Borough,AK
+0,1,ILZ036,public,Fulton,IL
+0,1,KSZ058,public,Coffey,KS
+0,1,NEZ052,public,Douglas,NE
+0,1,WYZ030,public,East Sweetwater County,WY
+0,1,ILZ035,public,McDonough,IL
+0,1,MIZ020,public,Leelanau,MI
+0,1,INZ067,public,Knox,IN
+0,1,KYZ074,public,Barren,KY
+0,1,COZ031,public,West Jackson and West Grand Counties Above 9000 Feet,CO
+0,1,AKZ327,public,Western Kupreanof and Kuiu Island,AK
+0,1,MNZ047,public,Stevens,MN
+0,1,ILZ047,public,Cass,IL
+0,1,KYZ065,public,Taylor,KY
+0,1,CAZ069,public,West Slope Northern Sierra Nevada,CA
+0,1,IAZ071,public,Adair,IA
+0,1,IAZ087,public,Jefferson,IA
+0,1,IAZ072,public,Madison,IA
+0,1,IAZ084,public,Lucas,IA
+0,1,KYZ072,public,Simpson,KY
+0,1,KSZ055,public,Osage,KS
+0,1,MOZ027,public,Marion,MO
+0,1,MOZ053,public,Bates,MO
+0,1,ILZ038,public,McLean,IL
+0,1,KYZ039,public,Anderson,KY
+0,1,MTZ308,public,Southern High Plains,MT
+0,1,MTZ023,public,McCone,MT
+0,1,COZ010,public,Gore and Elk Mountains/Central Mountain Valleys,CO
+0,1,INZ015,public,Fulton,IN
+0,1,KYZ001,public,Fulton,KY
+0,1,MTZ003,public,Flathead/Mission Valleys,MT
+0,1,INZ058,public,Fayette,IN
+0,1,WIZ026,public,Pepin,WI
+0,1,MOZ078,public,Cedar,MO
+0,1,MTZ019,public,Sheridan,MT
+0,1,INZ216,public,Southern Kosciusko,IN
+0,1,MOZ101,public,McDonald,MO
+0,1,KYZ093,public,Campbell,KY
+0,1,INZ062,public,Monroe,IN
+0,1,IAZ065,public,Cedar,IA
+0,1,CAZ328,public,Kings Canyon NP,CA
+0,1,INZ071,public,Jackson,IN
+0,1,MOZ108,public,Ripley,MO
+0,1,AKZ324,public,Admiralty Island,AK
+0,1,MOZ008,public,Schuyler,MO
+0,1,NEZ089,public,Gage,NE
+0,1,KSZ054,public,Lyon,KS
+0,1,OHZ061,public,Montgomery,OH
+0,1,IAZ007,public,Worth,IA
+0,1,NEZ034,public,Burt,NE
+0,1,WIZ063,public,Dane,WI
+0,1,CAZ068,public,Western Plumas County/Lassen Park,CA
+0,1,MOZ098,public,Shannon,MO
+0,1,KYZ091,public,Boone,KY
+0,1,MTZ026,public,Prairie,MT
+0,1,MOZ070,public,Pulaski,MO
+0,1,MOZ105,public,Ozark,MO
+0,1,MOZ046,public,Cooper,MO
+0,1,KSZ035,public,Dickinson,KS
+0,1,IDZ002,public,Coeur d'Alene Area,ID
+0,1,MIZ032,public,Wexford,MI
+0,1,TNZ006,public,Montgomery,TN
+0,1,KYZ049,public,Clark,KY
+0,1,IAZ058,public,Guthrie,IA
+0,1,INZ075,public,Ohio,IN
+0,1,INZ092,public,Clark,IN
+0,1,MOZ066,public,Vernon,MO
+0,1,MOZ045,public,Pettis,MO
+0,1,INZ051,public,Vigo,IN
+0,1,INZ065,public,Decatur,IN
+0,1,IAZ030,public,Clayton,IA
+0,1,WAZ521,public,Simcoe Highlands,WA
+0,1,COZ009,public,Grand and Battlement Mesas,CO
+0,1,INZ024,public,Wabash,IN
+0,1,INZ029,public,Tippecanoe,IN
+0,1,ILZ100,public,Madison,IL
+0,1,MOZ003,public,Worth,MO
+0,1,KYZ092,public,Kenton,KY
+0,1,WAZ569,public,West Slopes South Central Cascades and Passes,WA
+0,1,MOZ033,public,Randolph,MO
+0,1,ILZ064,public,Bond,IL
+0,1,NVZ002,public,Greater Lake Tahoe Area,NV
+0,1,ILZ057,public,Edgar,IL
+0,1,KYZ025,public,Meade,KY
+0,1,KYZ032,public,Trimble,KY
+0,1,MIZ039,public,Osceola,MI
+0,1,MOZ097,public,Howell,MO
+0,1,NYZ085,public,Southern Erie,NY
+0,1,MOZ110,public,Stoddard,MO
+0,1,WIZ027,public,Chippewa,WI
+0,1,MOZ095,public,Christian,MO
+0,1,ILZ018,public,Putnam,IL
+0,1,NDZ015,public,Ramsey,ND
+0,1,INZ033,public,Blackford,IN
+0,1,INZ056,public,Shelby,IN
+0,1,IDZ071,public,Frank Church Wilderness,ID
+0,1,INZ025,public,Huntington,IN
+0,1,ILZ107,public,Southern Will,IL
+0,1,KYZ045,public,Nelson,KY
+0,1,COZ008,public,Central Colorado River Basin,CO
+0,1,KSZ037,public,Morris,KS
+0,1,MOZ018,public,Knox,MO
+0,1,IDZ060,public,Bear River Range,ID
+0,1,OHZ054,public,Madison,OH
+0,1,WIZ039,public,Brown,WI
+0,1,MTZ024,public,Richland,MT
+0,1,WIZ059,public,Washington,WI
+0,1,ILZ095,public,Adams,IL
+0,1,MOZ016,public,Sullivan,MO
+0,1,INZ041,public,Delaware,IN
+0,1,ILZ007,public,Carroll,IL
+0,1,IAZ055,public,Harrison,IA
+0,1,ILZ070,public,Marion,IL
+0,1,IAZ029,public,Fayette,IA
+0,1,IAZ098,public,Van Buren,IA
+0,1,MTZ005,public,Missoula/Bitterroot Valleys,MT
+0,1,IAZ006,public,Winnebago,IA
+0,1,KYZ063,public,Hart,KY
+0,1,ILZ024,public,Mercer,IL
+0,1,ILZ037,public,Tazewell,IL
+0,1,KSZ059,public,Anderson,KS
+0,1,INZ069,public,Martin,IN
+0,1,COZ013,public,Flat Tops,CO
+0,1,UTZ110,public,Wasatch Mountains I-80 North,UT
+0,1,MOZ047,public,Moniteau,MO
+0,1,MDZ502,public,Central and Eastern Allegany,MD
+0,1,MOZ005,public,Harrison,MO
+0,1,CAZ327,public,Kaiser to Rodgers Ridge,CA
+0,1,IAZ066,public,Clinton,IA
+0,1,WIZ074,public,Southern Oconto County,WI
+0,1,ILZ049,public,Scott,IL
+0,1,KYZ019,public,Daviess,KY
+0,1,WIZ065,public,Waukesha,WI
+0,1,MIZ036,public,Iosco,MI
+0,1,WIZ062,public,Iowa,WI
+0,1,KYZ096,public,Pendleton,KY
+0,1,MTZ016,public,Central and Southeast Phillips,MT
+0,1,OHZ063,public,Fayette,OH
+0,1,OHZ014,public,Ashtabula Inland,OH
+0,1,MOZ081,public,Laclede,MO
+0,1,MTZ302,public,Northern High Plains,MT
+0,1,IAZ017,public,Cerro Gordo,IA
+0,1,ILZ030,public,Marshall,IL
+0,1,NEZ090,public,Johnson,NE
+0,1,MOZ071,public,Phelps,MO
+0,1,OHZ013,public,Geauga,OH
+0,1,INZ073,public,Ripley,IN
+0,1,TNZ033,public,Overton,TN
+0,1,MOZ102,public,Barry,MO
+0,1,AKZ317,public,City and Borough of Yakutat,AK
+0,1,WIZ004,public,Iron,WI
+0,1,WIZ040,public,Kewaunee,WI
+0,1,ILZ045,public,Champaign,IL
+0,1,IDZ075,public,Wood River Foothills,ID
+0,1,WAZ031,public,Northeast Blue Mountains,WA
+0,1,COZ012,public,West Elk and Sawatch Mountains,CO
+0,1,NEZ050,public,Butler,NE
+0,1,KSZ026,public,Jefferson,KS
+0,1,MIZ045,public,Mecosta,MI
+0,1,IAZ082,public,Union,IA
+0,1,COZ022,public,Animas River Basin,CO
+0,1,ORZ008,public,South  Willamette Valley,OR
+0,1,AKZ331,public,City of Hyder,AK
+0,1,KYZ026,public,Ohio,KY
+0,1,WAZ030,public,Northwest Blue Mountains,WA
+0,1,WIZ033,public,Trempealeau,WI
+0,1,MNZ083,public,Blue Earth,MN
+0,1,WYZ028,public,Rock Springs and Green River,WY
+0,1,ILZ043,public,De Witt,IL
+0,1,MOZ048,public,Cole,MO
+0,1,ILZ075,public,Jefferson,IL
+0,1,OHZ072,public,Clinton,OH
+0,1,INZ040,public,Madison,IN
+0,1,MIZ048,public,Bay,MI
+0,1,KYZ029,public,Bullitt,KY
+0,1,MIZ013,public,Delta,MI
+0,1,WVZ502,public,Eastern Grant,WV
+0,1,OHZ042,public,Darke,OH
+0,1,OHZ020,public,Medina,OH
+0,1,WIZ052,public,Sheboygan,WI
+0,1,ILZ091,public,Hardin,IL
+0,1,IAZ042,public,Dubuque,IA
+0,1,MIZ079,public,St. Joseph,MI
+0,1,UTZ111,public,Wasatch Mountains South of I-80,UT
+0,1,OHZ032,public,Stark,OH
+0,1,OHZ015,public,Paulding,OH
+0,1,MNZ067,public,Sibley,MN
+0,1,ORZ001,public,North Oregon Coast,OR
+0,1,INZ078,public,Scott,IN
+0,1,WIZ061,public,Grant,WI
+0,1,MNZ077,public,Rice,MN
+0,1,OHZ018,public,Seneca,OH
+0,1,MTZ002,public,West Glacier Region,MT
+0,1,IAZ096,public,Appanoose,IA
+0,1,KSZ040,public,Douglas,KS
+0,1,MOZ021,public,Clinton,MO
+0,1,WIZ038,public,Outagamie,WI
+0,1,ORZ015,public,Western Columbia River Gorge,OR
+0,1,WIZ019,public,Langlade,WI
+0,1,WAZ048,public,Western Chelan County,WA
+0,1,OHZ002,public,Fulton,OH
+0,1,IAZ085,public,Monroe,IA
+0,1,MOZ111,public,Scott,MO
+0,1,TNZ011,public,Pickett,TN
+0,1,MIZ073,public,Calhoun,MI
+0,1,NEZ068,public,Otoe,NE
+0,1,INZ082,public,Pike,IN
+0,1,MNZ070,public,Dakota,MN
+0,1,WIZ018,public,Lincoln,WI
+0,1,ILZ104,public,Central Cook,IL
+0,1,MNZ084,public,Waseca,MN
+0,1,NMZ203,public,Far Northwest Highlands,NM
+0,1,ILZ010,public,Lee,IL
+0,1,KSZ101,public,Cherokee,KS
+0,1,NEZ053,public,Sarpy,NE
+0,1,IAZ061,public,Jasper,IA
+0,1,ILZ039,public,Ford,IL
+0,1,NDZ014,public,Benson,ND
+0,1,WYZ001,public,Yellowstone National Park,WY
+0,1,INZ010,public,Newton,IN
+0,1,ILZ061,public,Shelby,IL
+0,1,MOZ112,public,Mississippi,MO
+0,1,MOZ094,public,Lawrence,MO
+0,1,IAZ056,public,Shelby,IA
+0,1,WYZ112,public,Sierra Madre Range,WY
+0,1,IAZ052,public,Linn,IA
+0,1,IAZ046,public,Greene,IA
+0,1,OHZ016,public,Putnam,OH
+0,1,MNZ038,public,Pine,MN
+0,1,ORZ502,public,Northern Blue Mountains of Oregon,OR
+0,1,WIZ058,public,Dodge,WI
+0,1,MNZ085,public,Steele,MN
+0,1,INZ083,public,Dubois,IN
+0,1,NYZ011,public,Genesee,NY
+0,1,MOZ032,public,Chariton,MO
+0,1,WAZ047,public,Central Chelan County,WA
+0,1,MNZ091,public,Martin,MN
+0,1,INZ045,public,Putnam,IN
+0,1,MNZ060,public,Hennepin,MN
+0,1,MOZ074,public,St. Francois,MO
+0,1,WYZ114,public,Snowy Range,WY
+0,1,TNZ030,public,Smith,TN
+0,1,IAZ015,public,Palo Alto,IA
+0,1,ILZ062,public,Cumberland,IL
+0,1,INZ081,public,Gibson,IN
+0,1,ILZ006,public,Lake,IL
+0,1,OHZ033,public,Mahoning,OH
+0,1,WIZ060,public,Ozaukee,WI
+0,1,MTZ329,public,Ruby Mountains and Southern Beaverhead Mountains,MT
+0,1,TNZ005,public,Stewart,TN
+0,1,MNZ082,public,Watonwan,MN
+0,1,NDZ006,public,Towner,ND
+0,1,INZ037,public,Boone,IN
+0,1,WIZ012,public,Florence,WI
+0,1,KYZ020,public,McLean,KY
+0,1,MOZ068,public,Hickory,MO
+0,1,MIZ054,public,Tuscola,MI
+0,1,IAZ057,public,Audubon,IA
+0,1,WYZ023,public,Star Valley,WY
+0,1,MOZ062,public,Franklin,MO
+0,1,MNZ064,public,Yellow Medicine,MN
+0,1,KSZ022,public,Riley,KS
+0,1,ILZ098,public,Calhoun,IL
+0,1,IAZ027,public,Butler,IA
+0,1,KSZ057,public,Miami,KS
+0,1,IAZ076,public,Keokuk,IA
+0,1,ILZ092,public,Alexander,IL
+0,1,MOZ092,public,Wright,MO
+0,1,MTZ316,public,Gates of the Mountains,MT
+0,1,KYZ055,public,Boyle,KY
+0,1,INZ007,public,Steuben,IN
+0,1,IAZ041,public,Delaware,IA
+0,1,MNZ042,public,Todd,MN
+0,1,KSZ024,public,Jackson,KS
+0,1,WAZ513,public,Olympics,WA
+0,1,ORZ011,public,Northern Oregon Cascades,OR
+0,1,MTZ320,public,"Big Belt, Bridger and Castle Mountains",MT
+0,1,MIZ062,public,Lapeer,MI
+0,1,OHZ030,public,Ashland,OH
+0,1,WAZ022,public,Lower Columbia and I - 5 Corridor in Cowlitz County,WA
+0,1,KSZ012,public,Brown,KS
+0,1,KYZ071,public,Warren,KY
+0,1,MOZ099,public,Reynolds,MO
+0,1,MOZ088,public,Jasper,MO
+0,1,IAZ070,public,Cass,IA
+0,1,MOZ028,public,Platte,MO
+0,1,INZ052,public,Clay,IN
+0,1,OHZ053,public,Clark,OH
+0,1,IAZ067,public,Muscatine,IA
+0,1,ILZ058,public,Greene,IL
+0,1,KYZ007,public,Livingston,KY
+0,1,OHZ019,public,Huron,OH
+0,1,KYZ076,public,Metcalfe,KY
+0,1,MOZ055,public,Benton,MO
+0,1,INZ039,public,Hamilton,IN
+0,1,INZ014,public,Marshall,IN
+0,1,INZ023,public,Miami,IN
+0,1,MIZ023,public,Montmorency,MI
+0,1,WIZ047,public,Green Lake,WI
+0,1,MIZ025,public,Benzie,MI
+0,1,INZ076,public,Orange,IN
+0,1,KYZ008,public,Marshall,KY
+0,1,MDZ501,public,Extreme Western Allegany,MD
+0,1,ILZ044,public,Piatt,IL
+0,1,MOZ069,public,Camden,MO
+0,1,ILZ009,public,Whiteside,IL
+0,1,IAZ005,public,Kossuth,IA
+0,1,MOZ015,public,Grundy,MO
+0,1,MIZ011,public,Dickinson,MI
+0,1,KSZ056,public,Franklin,KS
+0,1,MOZ077,public,Barton,MO
+0,1,INZ072,public,Jennings,IN
+0,1,OHZ071,public,Warren,OH
+0,1,WAZ039,public,Greater Vancouver Area,WA
+0,1,ILZ004,public,Boone,IL
+0,1,WIZ044,public,Adams,WI
+0,1,INZ059,public,Union,IN
+0,1,INZ036,public,Montgomery,IN
+0,1,KYZ003,public,Carlisle,KY
+0,1,IAZ060,public,Polk,IA
+0,1,IAZ010,public,Winneshiek,IA
+0,1,WYZ021,public,Southwest Wyoming,WY
+0,1,WIZ053,public,Vernon,WI
+0,1,WIZ024,public,Pierce,WI
+0,1,MOZ006,public,Mercer,MO
+0,1,IDZ064,public,Big Hole Mountains,ID
+0,1,MTZ004,public,Lower Clark Fork Region,MT
+0,1,OHZ070,public,Butler,OH
+0,1,KYZ017,public,Christian,KY
+0,1,IAZ091,public,Page,IA
+0,1,CAZ330,public,Sequoia NP,CA
+0,1,MOZ034,public,Monroe,MO
+0,1,ILZ059,public,Macoupin,IL
+0,1,OHZ012,public,Lake,OH
+0,1,WIZ057,public,Columbia,WI
+0,1,ILZ094,public,Massac,IL
+0,1,WAZ046,public,Central Columbia River Gorge,WA
+0,1,TNZ010,public,Clay,TN
+0,1,ILZ085,public,Williamson,IL
+0,1,WAZ514,public,Eastern Strait of Juan de Fuca,WA
+0,1,IAZ063,public,Iowa,IA
+0,1,NYZ006,public,Oswego,NY
+0,1,KYZ023,public,Hancock,KY
+0,1,ILZ077,public,Edwards,IL
+0,1,KYZ070,public,Logan,KY
+0,1,MTZ001,public,Kootenai/Cabinet Region,MT
+0,1,MIZ060,public,Shiawassee,MI
+0,1,OHZ060,public,Preble,OH
+0,1,ORZ010,public,Northern Oregon Cascade Foothills,OR
+0,1,ILZ087,public,Gallatin,IL
+0,1,MIZ059,public,Clinton,MI
+0,1,ORZ509,public,East Slopes of the Oregon Cascades,OR
+0,1,MOZ073,public,Washington,MO
+0,1,OHZ051,public,Miami,OH
+0,1,MNZ095,public,Fillmore,MN
+0,1,ILZ060,public,Montgomery,IL
+0,1,MNZ079,public,Wabasha,MN
+0,1,NEZ078,public,Saline,NE
+0,1,MIZ063,public,St. Clair,MI
+0,1,IAZ097,public,Davis,IA
+0,1,ILZ023,public,Kankakee,IL
+0,1,WIZ032,public,Buffalo,WI
+0,1,WVZ050,public,Hampshire,WV
+0,1,MTZ018,public,Daniels,MT
+0,1,INZ002,public,Porter,IN
+0,1,INZ046,public,Hendricks,IN
+0,1,IDZ063,public,Caribou Range,ID
+0,1,MNZ056,public,Chippewa,MN
+0,1,ILZ108,public,Eastern Will,IL
+0,1,WVZ503,public,Western Mineral,WV
+0,1,MIZ066,public,Eaton,MI
+0,1,KYZ081,public,Cumberland,KY
+0,1,ILZ078,public,Wabash,IL
+0,1,IAZ040,public,Buchanan,IA
+0,1,MOZ104,public,Taney,MO
+0,1,MNZ076,public,Le Sueur,MN
+0,1,WIZ017,public,Taylor,WI
+0,1,WIZ031,public,Shawano,WI
+0,1,INZ079,public,Jefferson,IN
+0,1,INZ049,public,Henry,IN
+0,1,KYZ098,public,Robertson,KY
+0,1,KYZ041,public,Fayette,KY
+0,1,WYZ013,public,Jackson Hole,WY
+0,1,MOZ019,public,Lewis,MO
+0,1,OHZ004,public,Defiance,OH
+0,1,MNZ021,public,Southern Cook/North Shore,MN
+0,1,KYZ010,public,Crittenden,KY
+0,1,INZ064,public,Bartholomew,IN
+0,1,ILZ033,public,Iroquois,IL
+0,1,MIZ052,public,Gratiot,MI
+0,1,WIZ022,public,Door,WI
+0,1,MOZ089,public,Dade,MO
+0,1,WAZ515,public,Western Strait of Juan De Fuca,WA
+0,1,INZ043,public,Vermillion,IN
+0,1,KSZ097,public,Crawford,KS
+0,1,IAZ043,public,Monona,IA
+0,1,COZ023,public,San Juan River Basin,CO
+0,1,INZ031,public,Howard,IN
+0,1,INZ070,public,Lawrence,IN
+0,1,OHZ029,public,Richland,OH
+0,1,WIZ016,public,Rusk,WI
+0,1,WIZ010,public,Oneida,WI
+0,1,WIZ064,public,Jefferson,WI
+0,1,MNZ069,public,Scott,MN
+0,1,WIZ070,public,Walworth,WI
+0,1,OHZ036,public,Marion,OH
+0,1,COZ068,public,Eastern San Juan Mountains Above 10000 Ft,CO
+0,1,WIZ015,public,Barron,WI
+0,1,KSZ103,public,Leavenworth,KS
+0,1,INZ050,public,Wayne,IN
+0,1,WIZ008,public,Sawyer,WI
+0,1,AKZ325,public,City and Borough of Juneau,AK
+0,1,ILZ056,public,Coles,IL
+0,1,MTZ067,public,Absaroka/Beartooth Mountains,MT
+0,1,WAZ045,public,Western Columbia River Gorge,WA
+0,1,WIZ056,public,Sauk,WI
+0,1,ILZ017,public,Bureau,IL
+0,1,ILZ079,public,Randolph,IL
+0,1,OHZ047,public,Knox,OH
+0,1,KYZ075,public,Monroe,KY
+0,1,WAZ512,public,Lower Chehalis Valley Area,WA
+0,1,CAZ072,public,Greater Lake Tahoe Area,CA
+0,1,WAZ558,public,Seattle and Vicinity,WA
+0,1,WIZ014,public,Polk,WI
+0,1,MIZ049,public,Huron,MI
+0,1,IAZ075,public,Mahaska,IA
+0,1,MTZ315,public,Upper Blackfoot and MacDonald Pass,MT
+0,1,ILZ090,public,Pope,IL
+0,1,WAZ507,public,Everett and Vicinity,WA
+0,1,MOZ109,public,Butler,MO
+0,1,MNZ057,public,Kandiyohi,MN
+0,1,COZ004,public,Elkhead and Park Mountains,CO
+0,1,KYZ006,public,Graves,KY
+0,1,OHZ006,public,Wood,OH
+0,1,WYZ024,public,Salt River and Wyoming Ranges,WY
+0,1,INZ086,public,Vanderburgh,IN
+0,1,IDZ074,public,Big Lost Highlands/Copper Basin,ID
+0,1,INZ020,public,White,IN
+0,1,OHZ009,public,Erie,OH
+0,1,MOZ091,public,Webster,MO
+0,1,MNZ088,public,Winona,MN
+0,1,WVZ504,public,Eastern Mineral,WV
+0,1,MNZ078,public,Goodhue,MN
+0,1,WIZ037,public,Waupaca,WI
+0,1,NMZ210,public,Tusas Mountains Including Chama,NM
+0,1,WAZ567,public,West Slopes North Cascades and Passes,WA
+0,1,OHZ038,public,Holmes,OH
+0,1,MIZ026,public,Grand Traverse,MI
+0,1,OHZ025,public,Allen,OH
+0,1,WIZ071,public,Racine,WI
+0,1,MNZ037,public,Carlton/South St. Louis,MN
+0,1,WYZ015,public,Wind River Mountains East,WY
+0,1,INZ085,public,Posey,IN
+0,1,IDZ073,public,Sun Valley Region,ID
+0,1,MOZ107,public,Carter,MO
+0,1,ILZ011,public,De Kalb,IL
+0,1,WIZ051,public,Fond Du Lac,WI
+0,1,IDZ004,public,Central Panhandle Mountains,ID
+0,1,INZ057,public,Rush,IN
+0,1,WIZ049,public,Calumet,WI
+0,1,MOZ103,public,Stone,MO
+0,1,ILZ089,public,Johnson,IL
+0,1,WAZ506,public,Western Skagit County,WA
+0,1,KYZ099,public,Mason,KY
+0,1,INZ087,public,Warrick,IN
+0,1,INZ017,public,Whitley,IN
+0,1,MOZ001,public,Atchison,MO
+0,1,MNZ049,public,Stearns,MN
+0,1,ILZ053,public,Macon,IL
+0,1,ILZ008,public,Ogle,IL
+0,1,ILZ029,public,Peoria,IL
+0,1,WIZ034,public,Jackson,WI
+0,1,INZ047,public,Marion,IN
+0,1,KYZ021,public,Muhlenberg,KY
+0,1,OHZ055,public,Franklin,OH
+0,1,MOZ013,public,De Kalb,MO
+0,1,MIZ004,public,Baraga,MI
+0,1,WIZ046,public,Marquette,WI
+0,1,ILZ054,public,Moultrie,IL
+0,1,MOZ041,public,Boone,MO
+0,1,CAZ519,public,Eastern Sierra Slopes of Inyo County,CA
+0,1,IAZ048,public,Story,IA
+0,1,WIZ013,public,Northern Marinette County,WI
+0,1,AKZ322,public,Cape Fairweather to Lisianski Strait,AK
+0,1,MIZ047,public,Midland,MI
+0,1,INZ066,public,Franklin,IN
+0,1,MNZ086,public,Dodge,MN
+0,1,MOZ002,public,Nodaway,MO
+0,1,MIZ069,public,Oakland,MI
+0,1,IAZ038,public,Grundy,IA
+0,1,KYZ016,public,Hopkins,KY
+0,1,KYZ013,public,Caldwell,KY
+0,1,MOZ040,public,Howard,MO
+0,1,IAZ011,public,Allamakee,IA
+0,1,ILZ072,public,Richland,IL
+0,1,MOZ024,public,Linn,MO
+0,1,INZ028,public,Warren,IN
+0,1,ILZ048,public,Menard,IL
+0,1,MOZ100,public,Wayne,MO
+0,1,OHZ046,public,Delaware,OH
+0,1,KYZ028,public,Hardin,KY
+0,1,NDZ024,public,Eddy,ND
+0,1,MTZ060,public,Southwest Phillips,MT
+0,1,IAZ080,public,Montgomery,IA
+0,1,MNZ055,public,Swift,MN
+0,1,ILZ099,public,Jersey,IL
+0,1,MTZ059,public,Northern Phillips,MT
+0,1,TNZ027,public,Davidson,TN
+0,1,NYZ012,public,Wyoming,NY
+0,1,KSZ011,public,Nemaha,KS
+0,1,MTZ020,public,Western Roosevelt,MT
+0,1,OHZ045,public,Union,OH
+0,1,MOZ093,public,Newton,MO
+0,1,WIZ020,public,Menominee,WI
+0,1,OHZ080,public,Highland,OH
+0,1,KYZ005,public,McCracken,KY
+0,1,ILZ069,public,Clinton,IL
+0,1,MOZ004,public,Gentry,MO
+0,1,NYZ007,public,Jefferson,NY
+0,1,WAZ024,public,Eastern Columbia River Gorge of Washington,WA
+0,1,ILZ103,public,Northern Cook,IL
+0,1,NMZ202,public,Chuska Mountains,NM
+0,1,MNZ061,public,Anoka,MN
+0,1,WAZ504,public,Southwest Interior,WA
+0,1,KYZ036,public,Scott,KY
+0,1,IAZ034,public,Calhoun,IA
+0,1,IAZ059,public,Dallas,IA
+0,1,NYZ010,public,Northern Erie,NY
+0,1,MTZ006,public,Bitterroot/Sapphire Mountains,MT
+0,1,MTZ301,public,East Glacier Park Region,MT
+0,1,WIZ025,public,Dunn,WI
+0,1,COZ005,public,Upper Yampa River Basin,CO
+0,1,MNZ053,public,Chisago,MN
+0,1,OHZ089,public,Ashtabula Lakeshore,OH
+0,1,OHZ062,public,Greene,OH
+0,1,WIZ069,public,Rock,WI
+0,1,MOZ010,public,Clark,MO
+0,1,IAZ077,public,Washington,IA
+0,1,TNZ009,public,Macon,TN
+0,1,MNZ093,public,Freeborn,MN
+0,1,WIZ055,public,Richland,WI
+0,1,INZ011,public,Jasper,IN
+0,1,IAZ068,public,Scott,IA
+0,1,NEZ051,public,Saunders,NE
+0,1,MIZ024,public,Alpena,MI
+0,1,INZ013,public,Pulaski,IN
+0,1,IAZ099,public,Lee,IA
+0,1,KYZ035,public,Franklin,KY
+0,1,TNZ066,public,Cumberland,TN
+0,1,MOZ049,public,Osage,MO
+0,1,MAZ023,public,Dukes,MA
+0,1,TNZ025,public,Dickson,TN
+0,1,KSZ008,public,Republic,KS
+0,1,ILZ013,public,DuPage,IL
+0,1,MIZ055,public,Sanilac,MI
+0,1,OHZ037,public,Morrow,OH
+0,1,KSZ039,public,Shawnee,KS
+0,1,INZ005,public,Elkhart,IN
+0,1,ILZ093,public,Pulaski,IL
+0,1,WIZ041,public,La Crosse,WI
+0,1,MNZ012,public,Northern Cook/Northern Lake,MN
+0,1,MNZ054,public,Lac Qui Parle,MN
+0,1,ILZ067,public,Jasper,IL
+0,1,MOZ057,public,Miller,MO
+0,1,INZ042,public,Randolph,IN
+0,1,KYZ077,public,Adair,KY
+0,1,ILZ081,public,Franklin,IL
+0,1,MNZ074,public,Brown,MN
+0,1,MTZ317,public,Little Belt and Highwood Mountains,MT
+0,1,MIZ029,public,Oscoda,MI
+0,1,INZ104,public,Eastern St. Joseph,IN
+0,1,MIZ012,public,Menominee,MI
+0,1,MIZ042,public,Arenac,MI
+0,1,KYZ053,public,Larue,KY
+0,1,MIZ033,public,Missaukee,MI
+0,1,KYZ064,public,Green,KY
+0,1,ILZ003,public,Winnebago,IL
+0,1,KYZ011,public,Lyon,KY
+0,1,IAZ024,public,Humboldt,IA
+0,1,MOZ056,public,Morgan,MO
+0,1,NEZ044,public,Dodge,NE
+0,1,INZ006,public,Lagrange,IN
+0,1,MOZ084,public,Iron,MO
+0,1,CAZ073,public,Mono,CA
+0,1,WIZ036,public,Portage,WI
+0,1,NEZ091,public,Nemaha,NE
+0,1,MIZ067,public,Ingham,MI
+0,1,WIZ006,public,Burnett,WI
+0,1,MIZ084,public,Southern Houghton,MI
+0,1,MIZ040,public,Clare,MI
+0,1,KYZ018,public,Henderson,KY
+0,1,KSZ038,public,Wabaunsee,KS
+0,1,IAZ037,public,Hardin,IA
+0,1,MOZ044,public,Johnson,MO
+0,1,MOZ085,public,Madison,MO
+0,1,MOZ014,public,Daviess,MO
+0,1,MOZ017,public,Adair,MO
+0,1,TNZ029,public,Trousdale,TN
+0,1,MNZ065,public,Renville,MN
+0,1,WAZ040,public,South Washington Cascade Foothills,WA
+0,1,INZ021,public,Carroll,IN
+0,1,OHZ011,public,Cuyahoga,OH
+0,1,INZ053,public,Owen,IN
+0,1,MIZ058,public,Ionia,MI
+0,1,IDZ061,public,Bear Lake Valley,ID
+0,1,NEZ045,public,Washington,NE
+0,1,INZ074,public,Dearborn,IN
+0,1,TNZ007,public,Robertson,TN
+0,1,KSZ020,public,Cloud,KS
+0,1,INZ077,public,Washington,IN
+0,1,MOZ039,public,Saline,MO
+0,1,IAZ018,public,Floyd,IA
+0,1,ILZ005,public,McHenry,IL
+0,1,ORZ014,public,Upper Hood River Valley,OR
+0,1,WIZ035,public,Wood,WI
+0,1,PAZ001,public,Northern Erie,PA
+0,1,MNZ075,public,Nicollet,MN
+0,1,NVZ034,public,Ruby Mountains and East Humboldt Range,NV
+0,1,MIZ018,public,Presque Isle,MI
+0,1,IAZ053,public,Jones,IA
+0,1,MOZ035,public,Ralls,MO
+0,1,MTZ322,public,Elkhorn and Boulder Mountains,MT
+0,1,TNZ031,public,Jackson,TN
+0,1,KSZ060,public,Linn,KS
+0,1,COZ001,public,Lower Yampa River Basin,CO
+0,1,INZ018,public,Allen,IN
+0,1,ILZ055,public,Douglas,IL
+0,1,KYZ004,public,Ballard,KY
+0,1,MIZ041,public,Gladwin,MI
+0,1,MNZ066,public,McLeod,MN
+0,1,MNZ068,public,Carver,MN
+0,1,WIZ007,public,Washburn,WI
+0,1,OHZ035,public,Auglaize,OH
+0,1,TNZ023,public,Houston,TN
+0,1,OHZ023,public,Trumbull,OH
+0,1,IAZ095,public,Wayne,IA
+0,1,IAZ083,public,Clarke,IA
+0,1,MOZ054,public,Henry,MO
+0,1,IAZ089,public,Des Moines,IA
+0,1,MTZ061,public,Northern Valley,MT
+0,1,WYZ012,public,Teton and Gros Ventre Mountains,WY
+0,1,IDZ072,public,Sawtooth/Stanley Basin,ID
+0,1,MIZ035,public,Ogemaw,MI
+0,1,KYZ002,public,Hickman,KY
+0,1,NEZ093,public,Richardson,NE
+0,1,MTZ068,public,Crazy Mountains,MT
+0,1,MIZ031,public,Manistee,MI
+0,1,ILZ021,public,Grundy,IL
+0,1,KSZ105,public,Johnson,KS
+0,1,KSZ073,public,Bourbon,KS
+0,1,MOZ065,public,Jefferson,MO
+0,1,IAZ028,public,Bremer,IA
+0,1,WIZ068,public,Green,WI
+0,1,WAZ021,public,South Washington Coast,WA
+0,1,IAZ081,public,Adams,IA
+0,1,MOZ026,public,Shelby,MO
+0,1,MOZ011,public,Holt,MO
+0,1,CAZ323,public,Yosemite NP outside of the valley,CA
+0,1,OHZ028,public,Crawford,OH
+0,1,ILZ074,public,Washington,IL
+0,1,AKZ329,public,City and Borough of Wrangell,AK
+0,1,IAZ062,public,Poweshiek,IA
+0,1,IAZ074,public,Marion,IA
+0,1,WAZ019,public,South Washington Cascades,WA
+0,1,IDZ003,public,Idaho Palouse,ID
+0,1,ILZ046,public,Vermilion,IL
+0,1,MNZ073,public,Redwood,MN
+0,1,MIZ082,public,Lenawee,MI
+0,1,KSZ034,public,Ottawa,KS
+0,1,MNZ034,public,Crow Wing,MN
+0,1,IDZ062,public,Blackfoot Mountains,ID
+0,1,INZ063,public,Brown,IN
+0,1,MTZ043,public,Potomac/Seeley Lake Region,MT
+0,1,IAZ039,public,Black Hawk,IA
+0,1,IDZ053,public,Upper Snake River Plain,ID
+0,1,KYZ054,public,Marion,KY
+0,1,INZ103,public,Northern La Porte,IN
+0,1,ILZ001,public,Jo Daviess,IL
+0,1,KYZ037,public,Harrison,KY
+0,1,IDZ001,public,Northern Panhandle,ID

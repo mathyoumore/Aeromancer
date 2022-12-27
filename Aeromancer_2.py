@@ -279,10 +279,10 @@ def retro_process():
                     new_event_locations = pd.concat([new_event_locations, new_loc])
                 events_processed += 1
 
-#fetch_new_events()
-retro_process()
+fetch_new_events()
+#retro_process()
 print(f"*******\n\nFinished getting events!\nAnd it only took me {round(time.time() - process_start,2)} seconds.\nUpdating UGC now!\n\n*******")
-#ugc_check.update_zones()
+ugc_check.update_zones()
 print(f"All done! Total time elapsed: {round(time.time() - process_start,2)} seconds")
 
 """
