@@ -1,3 +1,42 @@
+"""
+README
+Author: Matthew Mohr (matt@mathyoumore.com)
+
+This generates reports via the NWS API (https://www.weather.gov/documentation/services-web-api)
+The script is broadly autonomous and should be allowed to run at least once per day. 
+The NWS API is limited in what it can return, roughly 2-4 weeks before the request date based on record count, 
+so this has to be run regularly (and maybe more frequently during high-impact seasons).
+
+NWS uses something called Unique Geographical Codes (UGC, https://www.weather.gov/pimar/PubZone) to send out alerts. 
+This coding system ties pretty closely to county. 
+There are exceptions - particularly around mountains and valleys because mountains and valleys will have different weather from sea-level elevations
+
+UGCs can be updated by querying
+* https://api.weather.gov/zones/public
+* https://api.weather.gov/zones/county
+Note that the results of these queries will return nearly 10k records, so build it once and be done with it
+
+NWS events are indexed to nws_id:
+* Event (index: nws_id) - 1:M -> UGC
+
+The current table structure, therefore:
+* Events (PK: nws_id) - 1:M -> Event_Locations (FK: nws_id, ugc_id)
+* Event_Locations (PK: nws_is, ugc_id) - 1:1 -> Locations(PK: UGC)
+
+This, with a custom-built file that marries counties to zip codes, can be used to map NWS Events to zip codes and counties
+by joining on the name and state of a UGC. It mostly works, with exceptions for the mountains and valleys as mentioned above. 
+"""
+
+"""
+TO DO LIST, FEATURE EDITION
+Log that actually works
+
+* Automate so this runs every 3 hours or so
+* Fold in FEMA's API for large disasters
+
+* Something with data science that can let us know how volume will be affected before a storm hits
+"""
+
 import requests
 import json
 import re
@@ -9,29 +48,8 @@ from typing import List, Set, Dict, Tuple, Optional
 from PrecipitationParser import PrecipitationParser
 import os
 
-
 pd.options.display.width = 0
 
-"""
-TO DO LIST, FEATURE EDITION
-Consolidate files
-Log that actually works
-Appending with duplicate drops
-    - Remember to Where on max(effective) from the historical to save time
-
-* Map top (eventually, all we care about) HS addresses and service regions
-* Map top Pharma mfg addresses and ring a loud bell when someone gets hit hard
-* Automate so this runs every 3 hours or so
-* Fold in FEMA's API for large disasters
-
-* Something with data science that can let us know how volume will be affected before a storm hits
-
-TO DO, RESEARCH
-
-TO DO LIST
-Cron job to run this every day, appending data
-Visualization of data model
-"""
 
 def retry_get(url, url_params = {}, max_retries = 10, pass_errors = False):
     response = requests.get(url, params = url_params, verify=should_verify)
@@ -88,90 +106,18 @@ class NWSFetcher():
                     f"Now checking {event_params[self.event_params_index]['event']}")
         return data_raw
 
-class UGCFetcher():
-    def __init__(self):
-        self.max_retries = 5
-        self.land_url = 'https://api.weather.gov/zones/land/'
-        self.county_url = 'https://api.weather.gov/zones/county/'
-        self.ugc_df = pd.read_csv('ugc_master.csv')
-        self.goodzones = (
-            r"(AL|AK|AS|AR|AZ|CA|CO|CT|DE|DC|FL|GA|GU|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI"
-            r"|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|PR|RI|SC|SD|TN|TX|UT|VT|VI"
-            r"|VA|WA|WV|WI|WY|MP|PW|FM|MH)[ZC][0-9]{3}"
-        )
-        self.zones_to_check = []
-
-    def load_unknowns(self, ugc):
-        known = self.ugc_df[self.ugc_df['ugc'] == ugc]
-        if ~known.empty:
-            self.zones_to_check.append(ugc)
-
-    def update_zones(self):
-        #with open('data/raw/zones_to_check.txt', 'w', encoding='utf-8') as f:
-        #   f.write(str(self.zones_to_check))
-        new_ugc_df = pd.DataFrame()
-        county_zones = []
-        fails = []
-        self.zones_to_check = set(self.zones_to_check) - set(self.ugc_df['ugc'])
-        print("Checking", len(self.zones_to_check),"zones")
-        for i, ugc in enumerate(set(self.zones_to_check)):
-            time.sleep(2)
-            new_row = {'land': 1}
-            type_id = re.search("\w{2}(?P<identifier>C|Z)",ugc).groupdict()
-            url = self.land_url if type_id['identifier'] == 'Z' else self.county_url
-            try:
-                code, response = retry_get(url + ugc.strip(), pass_errors = True)
-                if code == '404':
-                    print("Neither land nor county:",ugc)
-                    new_row['land'] = 0
-                    new_row['ugc'] = ugc
-                    new_ugc_df = pd.concat([new_ugc_df,pd.DataFrame([new_row])])
-                    continue
-                data_raw = json.loads(str(response.text))['properties']
-                new_row = new_row | {
-                    'ugc': ugc,
-                    'type': data_raw['type'],
-                    'name': data_raw['name'],
-                    'state': data_raw['state']
-                }
-                new_ugc_df = pd.concat([new_ugc_df,pd.DataFrame([new_row])])
-            except:
-                fails.append({
-                'ugc': ugc,
-                'code': code,
-                'id': type_id
-                })
-                print("Failed to add",ugc)
-            print(f"Added zone {i} of {len(self.zones_to_check)} ({ugc})")
-        pd.DataFrame(fails).to_csv('zones_to_check_again.csv')
-        new_ugc_df.to_csv('ugc_master.csv')
-
 should_verify = True
-# If behind the company VPN, you'll need to be bad and add verify=False here
-# Definitely, extremely don't leave verify = false if you're using this for real
-# Can't emphasize that enough. Seriously.
-
-process_start = time.time()
-
-now = datetime.now()  # current date and time
-year = now.strftime("%Y")
-month = now.strftime("%m")
-start_time = datetime.strptime(
-    year + month + "01T00:00-05:00", '%Y%m%dT%H:%M%z')
-end_time = datetime.strptime(
-    str(int(year) + 1) + month + "01T00:00-05:00", '%Y%m%dT%H:%M%z')
+# Sometimes VPNs gets mad if you try to make HTTP requests outside of a browser
+# If you're behind a VPN that does this, switch this to False to run and then switch it back to True
 
 event_params = [
                    {
-                       'event': 'Winter Storm Warning',
-                       'severity': 'Severe'
-                   },
-                   {
-                        'event': 'Tornado Warning'
-                    }
+                       'event': "Winter Storm Warning,Ice Storm Warning,Blizzard Warning,Tornado Warning",
+                       'severity': "Severe,Extreme"
+                   }
     ]
+
 fetcher = NWSFetcher(event_params)
-ugc_check = UGCFetcher()
 
 precip_parser = PrecipitationParser()
 
@@ -214,7 +160,6 @@ def fetch_new_events():
                 new_events = new_events.reset_index(drop = True)
 
                 for ugc in event['geocode']['UGC']:
-                    ugc_check.load_unknowns(ugc)
                     new_loc = pd.DataFrame([{
                             'nws_id': event['id'],
                             'ugc': ugc
@@ -271,7 +216,6 @@ def retro_process():
                 new_events = new_events.reset_index(drop = True)
 
                 for ugc in event['geocode']['UGC']:
-                    ugc_check.load_unknowns(ugc)
                     new_loc = pd.DataFrame([{
                             'nws_id': event['id'],
                             'ugc': ugc
@@ -279,26 +223,71 @@ def retro_process():
                     new_event_locations = pd.concat([new_event_locations, new_loc])
                 events_processed += 1
 
-fetch_new_events()
+
+def retro_process_2():
+    i = 0
+    new_events = pd.DataFrame()
+    new_event_locations = pd.DataFrame()
+    events_processed = 0
+    directory = 'data/raw/'
+    salt = None
+    for file in os.listdir(directory):
+         filename = os.fsdecode(file)
+         file_path = directory+filename
+         if filename.endswith(".csv"):
+            if salt is None:
+                salt = file_path[12:-7]
+            if salt != file_path[12:-7]:
+                print(salt)
+                # new day data
+                new_event_locations.reset_index(drop=True).to_csv('data/v2_' + salt + '_event_locations.csv')
+                new_events.reset_index(drop=True).to_csv('data/v2_' + salt + '_events.csv')
+                salt = file_path[12:-7]
+            data_raw = pd.read_csv(file_path,on_bad_lines='warn')
+            for event in data_raw.itertuples():
+                i+=1
+                if (events_processed+i) % 100 == 0:
+                    print("Working on event",events_processed+i)
+                event_data = {
+                'nws_id': event.id,
+                'start':event.start_raw,
+                'end':event.expiry_raw,
+                'severity':event.severity,
+                'type':event.event}
+
+                precip_parser.dump()
+                precip_parser.load_description(event.description)
+                try:
+                    precip_data = precip_parser.process()
+                    event_data = event_data | precip_data
+                except:
+                    print("Precipitation Parsing Error", e)
+                    event_data = event_data | {'precipitation_error': 1}
+
+                new_event_row = pd.DataFrame([event_data])
+                new_events = pd.concat([new_events,new_event_row])
+                new_events = new_events.reset_index(drop = True)
+                if not(pd.isna(event.zip_codes)):
+                    try:
+                        for zip in event.zip_codes.split(','):
+                            new_loc = pd.DataFrame([{
+                                    'nws_id': event.id,
+                                    'zip': zip
+                                }])
+                            new_event_locations = pd.concat([new_event_locations, new_loc])
+                    except e_:
+                        breakpoint()
+                events_processed += 1
+
+
+process_start = time.time()
+#fetch_new_events()
+
+# I've included retro_process and SimpleFetch.py as a backup in case Aeromancer stops working because of API changes or whatever
+# Simply run SimpleFetch.py every day until you have a stable version going and then use retro_process to rerun the new process on the old files
 #retro_process()
+
+retro_process_2()
 print(f"*******\n\nFinished getting events!\nAnd it only took me {round(time.time() - process_start,2)} seconds.\nUpdating UGC now!\n\n*******")
-ugc_check.update_zones()
 print(f"All done! Total time elapsed: {round(time.time() - process_start,2)} seconds")
 
-"""
-MOZ034
-OKZ037
-"""
-
-
-"""
-Event
-Event_ID
-Loc_ID
-Alert_ID
-
-Location
-UGC
-State
-County
-"""
