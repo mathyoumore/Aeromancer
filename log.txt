@@ -1,0 +1,2 @@
+datehour,duration,events
+20221228T10,9.0,0
